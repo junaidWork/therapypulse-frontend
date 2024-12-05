@@ -1,5 +1,3 @@
-import React from "react";
-
 interface RadioOption {
   label: string;
   value: string;
@@ -9,11 +7,17 @@ interface RadioGroupProps {
   options: RadioOption[];
   value: string;
   onChange: (value: string) => void;
+  name?: string; // Added name for radio group
 }
 
-export function RadioGroup({ options, value, onChange }: RadioGroupProps) {
+export function RadioGroup({
+  options,
+  value,
+  onChange,
+  name,
+}: RadioGroupProps) {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4" role="radiogroup" aria-label={name}>
       {options.map((option) => (
         <label
           key={option.value}
@@ -21,6 +25,7 @@ export function RadioGroup({ options, value, onChange }: RadioGroupProps) {
         >
           <input
             type="radio"
+            name={name}
             value={option.value}
             checked={value === option.value}
             onChange={(e) => onChange(e.target.value)}
