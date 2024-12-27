@@ -1,13 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { cn } from "../../utils/helpers";
 
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
+  isLink: boolean;
+  className: string | undefined;
 }
 
-export const NavItem: React.FC<NavLinkProps> = ({ href, children }) => {
-  return (
+export const NavItemComponent: React.FC<NavLinkProps> = ({
+  href,
+  children,
+  isLink,
+  className,
+}) => {
+  return isLink ? (
     <NavLink
       to={href}
       className={({ isActive }) =>
@@ -20,5 +28,14 @@ export const NavItem: React.FC<NavLinkProps> = ({ href, children }) => {
         {children}
       </p>
     </NavLink>
+  ) : (
+    <p
+      className={cn(
+        "text-base leading-6 text-left transition-colors duration-300",
+        className
+      )}
+    >
+      {children}
+    </p>
   );
 };
