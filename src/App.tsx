@@ -1,11 +1,19 @@
-import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import ClientsPage from "./pages/ClientsPage";
+import NoPage from "./pages/NoPage";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <h1>hello world</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<ClientsPage />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
