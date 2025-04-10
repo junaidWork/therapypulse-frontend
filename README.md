@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# TherapyPulse UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A frontend implementation for the TherapyPulse project.
+
+## Technologies Used
+
+This project is built with the following technologies:
+
+- **React.js** - A JavaScript library for building user interfaces
+- **TypeScript** - Strongly typed programming language that builds on JavaScript
+- **Tailwind CSS** - A utility-first CSS framework for rapidly building custom designs
+- **Shadcn UI** - Beautifully designed components built with Radix UI and Tailwind CSS
+- **Storybook** - Tool for developing UI components in isolation
+
+## Key Libraries and Packages
+
+### Core Dependencies
+
+- React 18.3
+- React DOM 18.3
+- TypeScript 4.9
+
+### UI Components
+
+- Shadcn UI (using Radix UI primitives)
+- class-variance-authority - For creating variant components
+- tailwind-merge - For merging tailwind classes
+- lucide-react - Icon library
+
+### Routing
+
+- react-router-dom - For page routing and navigation
+
+### Development Tools
+
+- Storybook 8.4 - For component documentation and testing
+  - Various Storybook addons for accessibility and interactions testing
+- ESLint - For code linting
+- Tailwind CSS 3.4 - For utility-first styling
+
+## Responsive Design
+
+The application is fully responsive, adapting to different screen sizes and devices to provide an optimal user experience across desktop, tablet, and mobile views.
+
+## Frontend Only
+
+This is a frontend-only implementation. It does not include a backend server or API implementations.
 
 ## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `npm start` - Runs the app in development mode
+- `npm build` - Builds the app for production
+- `npm run storybook` - Starts Storybook for component development

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { UserPlus } from "lucide-react";
 import { Input } from "../elements/Input";
 import SearchableSelect from "../elements/Select";
 import { Button } from "../elements/Button";
-import { RadioGroup } from "../elements/RadioGroup";
 import { diagnosisOptions } from "../../utils/constants";
 import Switch from "../switch/Switch";
 
